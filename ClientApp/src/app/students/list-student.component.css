@@ -1,0 +1,11 @@
+.search-bar {
+  width: 75%;
+}
+
+.drop-results {
+  background-color: white;
+  text-align: left;
+  width: 72.5%;
+  margin-left: 12%;
+  margin: 1px 116px;
+}

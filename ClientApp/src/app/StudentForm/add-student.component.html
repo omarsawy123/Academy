@@ -1,0 +1,71 @@
+<div class=" container section">
+  <h3>{{HeaderText}}</h3>
+  <hr class="mb-4" />
+  <form [formGroup]="studentForm" (ngSubmit)="saveStudent(student)"  >
+    <div class=" form-group">
+      <label for="name" class="control-label">Student Name</label>
+      <input id="name" name="studentname" value="student.name" [(ngModel)]="student.name" class=" form-control"
+        type="text" minlength="2" maxlength="20" formControlName="name" required>
+      <div *ngIf="studentForm.get('name').errors && (studentForm.get('name').touched ||studentForm.get('name').dirty)" class="text-danger">
+        <small *ngIf="studentForm.get('name').hasError('required')" class="text-danger">
+          Name is required
+        </small>
+        <small *ngIf="studentForm.get('name').hasError('minlength')" class="text-danger">
+          Name is too short
+        </small>
+        <small *ngIf="studentForm.get('name').hasError('maxlength')" class="text-danger">
+          Name is too long
+        </small>
+      </div>
+    </div>
+    <div class=" form-group">
+      <label for="academicyear" class="control-label">Academic Year</label>
+      <select id="academicyear"  value="student.academicYear" [(ngModel)]="student.academicYear" class=" form-control"
+        type="text" formControlName="AcademicYear" required>
+        <option>FirstYear</option>
+        <option>SecondYear</option>  
+        <option>ThirdYear</option>  
+        <option>FourthYear</option>  
+      </select>
+      <div
+        *ngIf="studentForm.get('AcademicYear').errors && (studentForm.get('AcademicYear').touched ||studentForm.get('AcademicYear').dirty)"
+        class="text-danger">
+        <small *ngIf="studentForm.get('AcademicYear').hasError('required')" class="text-danger">
+          Year is required
+        </small>
+      </div>
+    </div>
+    <div class=" form-group">
+      <label for="dateofbirth" class="control-label">Date of Birth</label>
+      <input id="dateofbirth" value="{{student.dateOfBirth}}" [(ngModel)]="student.dateOfBirth" class=" form-control"
+        type="date" formControlName="DateOfBirth" required>
+      <input class="form-control" disabled value={{student.dateOfBirth|date}} type="text">
+      <div
+        *ngIf="studentForm.get('DateOfBirth').errors && (studentForm.get('DateOfBirth').touched ||studentForm.get('DateOfBirth').dirty)"
+        class="text-danger">
+        <small *ngIf="studentForm.get('DateOfBirth').hasError('required')" class="text-danger">
+          Date is required
+        </small>
+      </div>
+    </div>
+    <div class=" form-group">
+      <label for="description" class="control-label">Description</label>
+      <textarea id="description" value="student.description" [(ngModel)]="student.description" class=" form-control"
+        type="text" formControlName="Description" required></textarea>
+      <div
+        *ngIf="studentForm.get('Description').errors && (studentForm.get('Description').touched ||studentForm.get('Description').dirty)"
+        class="text-danger">
+        <small *ngIf="studentForm.get('Description').hasError('required')" class="text-danger">
+          Description is required
+        </small>
+      </div>
+    </div>
+    {{studentForm.value|json}}
+    {{student.id|json}},{{student.name|json}},{{student.academicYear|json}},{{student.dateOfBirth|json}},{{student.description|json}},
+    <button [disabled]="studentForm.invalid" class="btn btn-primary mt-4" type="submit">Save</button>
+    <ng-container *ngIf="student.id">
+      <button class="btn btn-danger mt-4 float-right" (click)="deleteStudent(student.id)" type="button">Delete</button>
+    </ng-container>
+  </form>
+
+</div>
