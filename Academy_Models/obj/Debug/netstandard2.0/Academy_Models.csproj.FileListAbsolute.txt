@@ -1,0 +1,9 @@
+C:\Users\Win 7\source\repos\Academy_Models\bin\Debug\netstandard2.0\Academy_Models.deps.json
+C:\Users\Win 7\source\repos\Academy_Models\bin\Debug\netstandard2.0\Academy_Models.dll
+C:\Users\Win 7\source\repos\Academy_Models\obj\Debug\netstandard2.0\Academy_Models.csprojAssemblyReference.cache
+C:\Users\Win 7\source\repos\Academy_Models\obj\Debug\netstandard2.0\Academy_Models.AssemblyInfoInputs.cache
+C:\Users\Win 7\source\repos\Academy_Models\obj\Debug\netstandard2.0\Academy_Models.AssemblyInfo.cs
+C:\Users\Win 7\source\repos\Academy_Models\bin\Debug\netstandard2.0\Academy_Models.pdb
+C:\Users\Win 7\source\repos\Academy_Models\obj\Debug\netstandard2.0\Academy_Models.csproj.CoreCompileInputs.cache
+C:\Users\Win 7\source\repos\Academy_Models\obj\Debug\netstandard2.0\Academy_Models.dll
+C:\Users\Win 7\source\repos\Academy_Models\obj\Debug\netstandard2.0\Academy_Models.pdb
